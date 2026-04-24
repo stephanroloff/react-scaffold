@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar.tsx";
 import Products from "./pages/Products.tsx";
 import Product from "./pages/Product.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import ProductsLayout from "./layouts/ProductsLayout.tsx";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/team" element={<Team />} />
-        <Route path="/products">
+        <Route path="/products" element={<ProductsLayout />}>
           <Route index element={<Products />} /> 
           <Route path=":id" element={<Product />} /> {/* Dynamic route */}
         </Route>
@@ -26,3 +27,5 @@ function App() {
 }
 
 export default App;
+
+
