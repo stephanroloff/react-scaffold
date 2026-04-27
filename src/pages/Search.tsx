@@ -10,6 +10,7 @@ function Search() {
     <input className="border-2 border-gray-400 rounded-md p-2 mx-auto block" type="text" placeholder="Search" value={n || ""} onChange={(e) => {
       setSearchParams({ n: e.target.value, sort: sort || "asc" });
     }} />
+    <br />
     <select className="border-2 border-gray-400 rounded-md p-2 mx-auto block" value={sort || "asc"} onChange={(e) => {
       setSearchParams({ n: n || "", sort: e.target.value });
     }}>
